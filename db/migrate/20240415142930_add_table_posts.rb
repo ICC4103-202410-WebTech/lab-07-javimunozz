@@ -7,6 +7,8 @@ class AddTablePosts < ActiveRecord::Migration[7.1]
       t.integer :answers_count, null: false, default: 0
       t.integer :likes_count, null: false, default: 0
 
+      t.references :user, null: false, foreign_key: true #P1
+
       t.timestamps
     end
   end
