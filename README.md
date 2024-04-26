@@ -48,7 +48,6 @@ Make sure to create the relationships between the tables, so the database is pop
 1. Find all the posts that belong to a user with the name "John Doe".
 
 ```ruby
-User.find_by(name: "John Doe")
 Post.joins(:user).where(users: { name: "John Doe" })
 ```
 
